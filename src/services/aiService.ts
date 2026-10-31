@@ -187,7 +187,7 @@ const EXPLICIT_OFF_TOPIC_REGEX = [
 ]
 
 // Indic Unicode block test
-const INDIC_SCRIPT_REGEX = /[\u0900-\u097F\u0980-\u09FF\u0A00-\u0A7F\u0A80-\u0AFF\u0B00-\u0B7F\u0B80-\u0BFF\u0C00-\u0C7F\u0C80-\u0CFF\u0D00-\u0D7F]/
+export const INDIC_SCRIPT_REGEX = /[\u0900-\u097F\u0980-\u09FF\u0A00-\u0A7F\u0A80-\u0AFF\u0B00-\u0B7F\u0B80-\u0BFF\u0C00-\u0C7F\u0C80-\u0CFF\u0D00-\u0D7F]/
 
 /**
  * Accurately detects regional language from user prompt based on Unicode script,
@@ -382,6 +382,7 @@ export function evaluateWeatherGuardrails(
   const prompt = userPrompt.toLowerCase().trim()
   const effectiveLang = detectLanguageFromPrompt(userPrompt, selectedLanguageCode)
   const defaultRedirect = REDIRECTION_MESSAGES[effectiveLang] || REDIRECTION_MESSAGES.en
+  const isHindiMode = effectiveLang === 'hi'
 
   // 1. Critical Life-Safety Check: Active Physical Emergencies
   const isEmergency = ACTIVE_EMERGENCY_REGEX.some((pattern) => pattern.test(prompt))

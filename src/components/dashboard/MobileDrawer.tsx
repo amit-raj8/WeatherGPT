@@ -59,7 +59,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   <span className="font-medium text-slate-700 dark:text-slate-300">Language</span>
                 </div>
                 <select
-                  value={currentLanguage.code}
+                  value={currentLanguage}
                   onChange={(e) => setLanguage(e.target.value)}
                   className="bg-transparent border-0 text-slate-900 dark:text-white font-semibold text-xs focus:outline-hidden cursor-pointer"
                   title="Select Regional Language"

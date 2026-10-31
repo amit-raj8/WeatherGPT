@@ -44,7 +44,7 @@ export default function DashboardTopbar({ onMenuToggle, isDark, onThemeToggle }:
         <div className="flex items-center gap-1 bg-slate-100 dark:bg-white/[0.06] px-1.5 py-0.5 rounded-md text-[11px]">
           <Globe className="w-3 h-3 text-brand-green shrink-0" />
           <select
-            value={currentLanguage.code}
+            value={currentLanguage}
             onChange={(e) => setLanguage(e.target.value)}
             className="bg-transparent border-0 text-slate-800 dark:text-white font-medium focus:outline-hidden cursor-pointer text-xs pr-1"
             title="Select Regional Language"

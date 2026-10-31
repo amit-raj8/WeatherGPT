@@ -128,7 +128,7 @@ export default function Navbar() {
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-300 dark:border-[#1c2333] bg-white/50 dark:bg-white/[0.04] backdrop-blur-xs text-xs font-medium text-slate-700 dark:text-slate-300">
             <Globe className="w-3.5 h-3.5 text-brand-green shrink-0" />
             <select
-              value={currentLanguage.code}
+              value={currentLanguage}
               onChange={(e) => setLanguage(e.target.value)}
               className="bg-transparent border-0 text-slate-800 dark:text-white font-medium focus:outline-hidden cursor-pointer text-xs"
               title="Select Site Language"
@@ -200,7 +200,7 @@ export default function Navbar() {
                   <span className="text-muted-dark font-medium">Language</span>
                 </div>
                 <select
-                  value={currentLanguage.code}
+                  value={currentLanguage}
                   onChange={(e) => setLanguage(e.target.value)}
                   className="bg-transparent border-0 text-white font-semibold text-xs focus:outline-hidden cursor-pointer"
                 >

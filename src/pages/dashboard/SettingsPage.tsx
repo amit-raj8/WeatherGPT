@@ -75,7 +75,7 @@ export default function SettingsPage() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 text-xs">
                 {SUPPORTED_LANGUAGES.map((lang) => {
-                  const isSelected = currentLanguage.code === lang.code
+                  const isSelected = currentLanguage === lang.code
                   return (
                     <button
                       key={lang.code}
